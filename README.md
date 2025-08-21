@@ -1,4 +1,3 @@
-# java_question
 # Java OOP Output-Based MCQ Questions
 
 ## 1. Classes and Objects
@@ -1598,57 +1597,215 @@ b) Hello, Dick
 c) Goodnight, Dick  
 d) Hello, Richard  
 
-## Answers
+# Java OOP MCQ - Answer Key
 
-1. b) 20 10
-2. b) 3 3 3
-3. a) 10
-4. c) Base Derived
-5. b) Dog barks
-6. c) Drawing Circle, Calculate Area, Runtime Error
-7. a) Integer: 10String: Hello
-8. c) Compilation Error
-9. c) Parent's show() Child's show()
-10. c) Compilation Error
-11. c) Parent Constructor Child Constructor
-12. c) Parameterized Constructor with value 10 Default Constructor
-13. a) Abstract Class Constructor Concrete Class Constructor Abstract Method Implementation Concrete Method
-14. a) Shape created Circle created Area: 78.5
-15. a) Print Default Show
-16. c) C's show
-17. b) x = 20 super.x = 10
-18. b) 20 10
-19. d) 25
-20. a) Parent's static method
-21. c) Compilation Error
-22. d) Compilation Error
-23. b) 20 10
-24. c) Parent Constructor Parent Parameterized Constructor Child Constructor
-25. a) Static method in Base Static method in Derived
-26. c) Parent's static method Child's instance method
-27. a) outerVar = 10 innerVar = 20
-28. a) nestedVar = 20 outerVar = 10
-29. a) Hello, World!
-30. a) 10
-31. a) Base method Derived method Derived method
-32. a) 10 30 20
-33. b) 2
-34. d) 4
-35. c) Child m1 Compilation Error
-36. a) Parent static block Child static block Parent instance block Parent constructor Child instance block Child constructor
-37. c) Compilation Error
-38. a) 30 30 20 10
-39. c) 30
-40. c) Compilation Error
-41. a) Method B
-42. c) 20
-43. c) Child value: 0 Child value: 200
-44. b) 1 1 2
-45. a) Shape constructor Circle constructor Draw Circle
-46. a) Class A Class B Class C
-47. b) 30 20 10
-48. a) A's static method B's static method
-49. c) Caught: Exception occurred Finally block executed
-50. a) Method implementation
-51. c) true false
-52. c) Goodnight, Dick
+## Question 1
+**Answer: B) 20 10**
+- Each object has its own copy of instance variables. The value of `x` in `t1` is changed to 20, while `t2.x` remains 10.
+
+## Question 2
+**Answer: B) 3 3 3**
+- `count` is a static variable shared across all instances. After creating 3 objects, count becomes 3, and all objects reference the same value.
+
+## Question 3
+**Answer: A) 10**
+- Although the reference variable is of type `Child`, the variable `value` is accessed based on the reference type (Parent), not the object type.
+
+## Question 4
+**Answer: C) Base Derived**
+- The parent class constructor is always called before the child class constructor.
+
+## Question 5
+**Answer: B) Dog barks**
+- This demonstrates runtime polymorphism. The method called is determined by the actual object type (Dog), not the reference type.
+
+## Question 6
+**Answer: C) Drawing Circle, Calculate Area, Runtime Error**
+- The `draw()` method is overridden in Circle, but `circleSpecific()` method doesn't exist in Shape, causing runtime error.
+
+## Question 7
+**Answer: A) Integer: 10String: Hello**
+- Method overloading selects the correct method based on parameter types. No space is printed between outputs.
+
+## Question 8
+**Answer: C) Compilation Error**
+- Method overloading cannot be done by changing only the return type. Both methods have the same parameter list.
+
+## Question 9
+**Answer: C) Parent's show() Child's show()**
+- `obj1` is a Parent reference to a Parent object, so it calls Parent's show().
+- `obj2` is a Parent reference to a Child object, so it calls Child's show() due to method overriding.
+
+## Question 10
+**Answer: C) Compilation Error**
+- Private methods cannot be overridden, and the base class method is not accessible from the derived class reference.
+
+## Question 11
+**Answer: C) Parent Constructor Child Constructor**
+- The parent class constructor is always executed before the child class constructor.
+
+## Question 12
+**Answer: C) Parameterized Constructor with value 10 Default Constructor**
+- The `this(10)` call invokes the parameterized constructor first, then executes the default constructor.
+
+## Question 13
+**Answer: A) Abstract Class Constructor Concrete Class Constructor Abstract Method Implementation Concrete Method**
+- The parent constructor executes first, followed by the child constructor, and then the method calls.
+
+## Question 14
+**Answer: A) Shape created Circle created Area: 78.5**
+- The parent constructor executes first, followed by the child constructor, and then the area calculation.
+
+## Question 15
+**Answer: A) Print Default Show**
+- The implementing class provides implementation for the `print()` method and uses the default implementation of `show()`.
+
+## Question 16
+**Answer: C) C's show**
+- When a class implements multiple interfaces with the same default method, it must override that method.
+
+## Question 17
+**Answer: B) x = 20 super.x = 10**
+- The local variable `x` is 20, while the parent class variable `x` accessed via `super.x` is 10.
+
+## Question 18
+**Answer: B) 20 10**
+- The inner class's `x` is 20, and the outer class's `x` accessed via `MyClass.this.x` is 10.
+
+## Question 19
+**Answer: D) 25**
+- Static blocks are executed in order when the class is loaded: x starts at 10, first block adds 5, second block adds 10.
+
+## Question 20
+**Answer: A) Parent's static method**
+- Static methods are resolved at compile time based on the reference type, not the object type.
+
+## Question 21
+**Answer: C) Compilation Error**
+- Final methods cannot be overridden in child classes.
+
+## Question 22
+**Answer: D) Compilation Error**
+- A final variable cannot be assigned multiple times. It's assigned in the initialization block and then again in the constructor.
+
+## Question 23
+**Answer: B) 20 10**
+- `this.x` refers to the current class's variable (20), while `super.x` refers to the parent class's variable (10).
+
+## Question 24
+**Answer: C) Parent Constructor Parent Parameterized Constructor Child Constructor**
+- The `super(10)` call invokes the parent's parameterized constructor, which calls the default constructor via `this()`.
+
+## Question 25
+**Answer: A) Static method in Base Static method in Derived**
+- Static methods are bound at compile time based on the reference type, not runtime type.
+
+## Question 26
+**Answer: C) Parent's static method Child's instance method**
+- Static methods use the reference type (Parent), while instance methods use the object type (Child).
+
+## Question 27
+**Answer: A) outerVar = 10 innerVar = 20**
+- Inner class has access to the outer class's private members.
+
+## Question 28
+**Answer: A) nestedVar = 20 outerVar = 10**
+- Static nested classes need an instance of the outer class to access its instance variables.
+
+## Question 29
+**Answer: A) Hello, World!**
+- Anonymous class implements the interface method and outputs the message.
+
+## Question 30
+**Answer: A) 10**
+- Local inner classes can access final (or effectively final) local variables.
+
+## Question 31
+**Answer: A) Base method Derived method Derived method**
+- `super.method()` calls the parent's method, while `this.method()` and `method()` call the current class's method.
+
+## Question 32
+**Answer: A) 10 30 20**
+- First the instance initialization block executes (prints 10, sets x=30), then the constructor (prints 30, sets x=20).
+
+## Question 33
+**Answer: B) 2**
+- Method overriding takes effect at runtime based on the actual object type.
+
+## Question 34
+**Answer: D) 4**
+- When constructing a SubTest, first the parent constructor runs, calling the overridden display() method with i=0. Then SubTest's constructor runs, setting i=4.
+
+## Question 35
+**Answer: C) Child m1 Compilation Error**
+- Method m1() is overridden, but m2() doesn't exist in Parent, causing compilation error.
+
+## Question 36
+**Answer: A) Parent static block Child static block Parent instance block Parent constructor Child instance block Child constructor**
+- Static blocks execute first in inheritance order, then instance blocks and constructors.
+
+## Question 37
+**Answer: C) Compilation Error**
+- The reference to x is ambiguous as both interfaces define it.
+
+## Question 38
+**Answer: A) 30 30 20 10**
+- Local variable x=30, this.x refers to C's x, B.this.x refers to B's x, and A.this.x refers to A's x.
+
+## Question 39
+**Answer: C) 30**
+- Static initialization blocks are executed in the order they appear, so i becomes 30.
+
+## Question 40
+**Answer: C) Compilation Error**
+- Final methods cannot be overridden in subclasses.
+
+## Question 41
+**Answer: A) Method B**
+- Downcasting allows access to the subclass-specific methods.
+
+## Question 42
+**Answer: C) 20**
+- Static variables are shared among all instances, so the last assignment (20) is visible to all.
+
+## Question 43
+**Answer: C) Child value: 0 Child value: 200**
+- Parent constructor calls the overridden print() method when Child's value is still 0, then Child constructor runs.
+
+## Question 44
+**Answer: B) 1 1 2**
+- Static block executes when class loads, setting i=1 and printing it. Then main method prints the current value (1) and changes it to 2.
+
+## Question 45
+**Answer: A) Shape constructor Circle constructor Draw Circle**
+- Abstract class constructor is called before the concrete class constructor.
+
+## Question 46
+**Answer: A) Class A Class B Class C**
+- Instance blocks print parent class values during initialization.
+
+## Question 47
+**Answer: B) 30 20 10**
+- Local variable x=30, this.x refers to Inner's x (20), and Test.this.x refers to Test's x (10).
+
+## Question 48
+**Answer: A) A's static method B's static method**
+- Static methods can be called on null references since they belong to the class, not instances.
+
+## Question 49
+**Answer: C) Caught: Exception occurred Finally block executed**
+- Finally block always executes after try-catch blocks.
+
+## Question 50
+**Answer: A) Method implementation**
+- When interfaces have methods with the same signature, a single implementation is enough.
+
+## Question 51
+**Answer: C) true false**
+- Integer caches values between -128 and 127, so i1 and i2 reference the same object, but i3 and i4 are different objects.
+
+## Question 52
+**Answer: C) Goodnight, Dick**
+- Static methods are resolved based on reference type (Super), while instance methods are resolved based on actual object type (Sub).
+
+
